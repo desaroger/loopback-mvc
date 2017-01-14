@@ -1,7 +1,7 @@
 {
   "name": "loopback-mvc",
-  "version": "1.0.0",
-  "description": "MVC middleware for loopback",
+  "version": "1.0.1",
+  "description": "MVC plugin for loopback",
   "main": "src/index.js",
   "scripts": {
     "build": "rimraf dist && mkdir dist && ncp src dist && babel -d dist src",
