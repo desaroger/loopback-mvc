@@ -10,6 +10,7 @@ function mvcPlugin(app, options = {}) {
         controllersFolder: 'mvc/controllers',
         viewFolder: 'mvc/views',
         views: true,
+        viewsEngine: 'pug',
         middlewarePhase: 'routes:before'
     }, options);
 
@@ -21,7 +22,7 @@ function mvcPlugin(app, options = {}) {
 
     if (options.views) {
         app.set('views', options.viewFolder);
-        app.set('view engine', 'pug');
+        app.set('view engine', options.viewsEngine);
     }
 
     return {router, options};
